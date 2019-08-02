@@ -8,12 +8,12 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/Gaurav63/oxy/roundrobin"
 	"github.com/containous/traefik/testhelpers"
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/vulcand/oxy/forward"
-	"github.com/vulcand/oxy/roundrobin"
 )
 
 func TestRetry(t *testing.T) {

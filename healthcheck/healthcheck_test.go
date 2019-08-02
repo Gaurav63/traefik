@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Gaurav63/oxy/roundrobin"
 	"github.com/containous/traefik/testhelpers"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/vulcand/oxy/roundrobin"
 )
 
 const healthCheckInterval = 100 * time.Millisecond

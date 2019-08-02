@@ -30,6 +30,8 @@ const (
 	annotationKubernetesLoadBalancerMethod              = "ingress.kubernetes.io/load-balancer-method"
 	annotationKubernetesAffinity                        = "ingress.kubernetes.io/affinity"
 	annotationKubernetesSessionCookieName               = "ingress.kubernetes.io/session-cookie-name"
+	annotationKubernetesSessionCookieCipherKey          = "ingress.kubernetes.io/session-cookie-cipherkey"
+	annotationKubernetesSessionCookieMaxAge             = "ingress.kubernetes.io/session-cookie-maxage"
 	annotationKubernetesRuleType                        = "ingress.kubernetes.io/rule-type"
 	annotationKubernetesRedirectEntryPoint              = "ingress.kubernetes.io/redirect-entry-point"
 	annotationKubernetesRedirectPermanent               = "ingress.kubernetes.io/redirect-permanent"
@@ -80,6 +82,8 @@ var compatibilityMapping = map[string]string{
 	annotationKubernetesLoadBalancerMethod:       "traefik.backend.loadbalancer.method",
 	annotationKubernetesAffinity:                 "traefik.backend.loadbalancer.stickiness",
 	annotationKubernetesSessionCookieName:        "traefik.backend.loadbalancer.stickiness.cookieName",
+	annotationKubernetesSessionCookieCipherKey:   "traefik.backend.loadbalancer.stickiness.cookie.cipherKey",
+	annotationKubernetesSessionCookieMaxAge:      "traefik.backend.loadbalancer.stickiness.cookie.maxAge",
 	annotationKubernetesRuleType:                 "traefik.frontend.rule.type",
 	annotationKubernetesRedirectEntryPoint:       "traefik.frontend.redirect.entrypoint",
 	annotationKubernetesRedirectRegex:            "traefik.frontend.redirect.regex",

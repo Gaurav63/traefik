@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/Gaurav63/oxy/roundrobin"
 	"github.com/containous/traefik/log"
 	"github.com/containous/traefik/safe"
 	"github.com/go-kit/kit/metrics"
-	"github.com/vulcand/oxy/roundrobin"
 )
 
 var singleton *HealthCheck

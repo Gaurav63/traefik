@@ -72,6 +72,18 @@
   revision = "6add9cd6ad42d389d6ead1dde60b4ad71e46fd74"
 
 [[projects]]
+  branch = "feature/EncryptSessionCookie"
+  name = "github.com/Gaurav63/oxy"
+  packages = ["roundrobin"]
+  revision = "554007f463bcbc140b9ae6d401fc26c2631ab6c5"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/Gaurav63/security"
+  packages = ["encryption"]
+  revision = "96b50d189217a61718aa312eb878badc5d28e3c7"
+
+[[projects]]
   name = "github.com/JamesClonk/vultr"
   packages = ["lib"]
   revision = "2fd0705ce648e602e6c9c57329a174270a4f6688"
@@ -257,8 +269,8 @@
 [[projects]]
   name = "github.com/cenk/backoff"
   packages = ["."]
-  revision = "1e4cf3da559842a91afcb6ea6141451e6c30c618"
-  version = "v2.1.1"
+  revision = "2146c93394225c3732078705043ce9f26584d334"
+  version = "v2.2.0"
 
 [[projects]]
   name = "github.com/cenkalti/backoff"
@@ -853,6 +865,7 @@
   revision = "9b66602d496a139e4722bdde32f0f1ac1c12d4a8"
 
 [[projects]]
+  branch = "master"
   name = "github.com/jjcollinge/servicefabric"
   packages = ["."]
   revision = "8eebe170fa1ba25d3dfb928b3f86a7313b13b9fe"
@@ -1300,8 +1313,8 @@
     "domain",
     "util"
   ]
-  revision = "1dc93a7db3567a5ccf865106afac88278ba940cf"
-  version = "v5.8.1"
+  revision = "efb64632cab7701ec33f1eaeaa738e2207efe68e"
+  version = "v5.14"
 
 [[projects]]
   name = "github.com/tv42/zbase32"
@@ -1376,7 +1389,6 @@
     "forward",
     "memmetrics",
     "ratelimit",
-    "roundrobin",
     "utils"
   ]
   revision = "c34b0c501e43223bc816ac9b40b0ac29c44c8952"
@@ -1904,6 +1916,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8e2d1952c8e853cc6514e5962809e746f0f20eda9dce49e5f17a1d35544fc79e"
+  inputs-digest = "e82a4d047d351de76f591cbc4d0eeeff7734ef40d4635020946ec18fb0dc7aef"
   solver-name = "gps-cdcl"
   solver-version = 1

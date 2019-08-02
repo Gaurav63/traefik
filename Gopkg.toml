@@ -264,3 +264,11 @@
 [[constraint]]
   name = "gopkg.in/DataDog/dd-trace-go.v1"
   version = "1.7.0"
+
+[[constraint]]
+  branch = "feature/EncryptSessionCookie"
+  name = "github.com/Gaurav63/oxy"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/Gaurav63/security"

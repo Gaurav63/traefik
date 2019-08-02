@@ -8,6 +8,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/Gaurav63/oxy/roundrobin"
 	"github.com/containous/flaeg"
 	"github.com/containous/mux"
 	"github.com/containous/traefik/configuration"
@@ -19,7 +20,6 @@ import (
 	"github.com/containous/traefik/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/vulcand/oxy/roundrobin"
 )
 
 // LocalhostCert is a PEM-encoded TLS cert with SAN IPs

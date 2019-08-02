@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"testing"
 
+	"github.com/Gaurav63/oxy/roundrobin"
 	"github.com/containous/traefik/testhelpers"
-	"github.com/vulcand/oxy/roundrobin"
 )
 
 func TestEmptyBackendHandler(t *testing.T) {

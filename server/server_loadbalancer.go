@@ -10,6 +10,7 @@ import (
 	"net/url"
 	"time"
 
+	"github.com/Gaurav63/oxy/roundrobin"
 	"github.com/containous/traefik/configuration"
 	"github.com/containous/traefik/healthcheck"
 	"github.com/containous/traefik/log"
@@ -21,7 +22,6 @@ import (
 	"github.com/vulcand/oxy/buffer"
 	"github.com/vulcand/oxy/connlimit"
 	"github.com/vulcand/oxy/ratelimit"
-	"github.com/vulcand/oxy/roundrobin"
 	"github.com/vulcand/oxy/utils"
 	"golang.org/x/net/http2"
 )
@@ -127,7 +127,8 @@ func (s *Server) buildLoadBalancer(frontendName string, backendName string, back
 	var cookieName string
 	if stickiness := backend.LoadBalancer.Stickiness; stickiness != nil {
 		cookieName = cookie.GetName(stickiness.CookieName, backendName)
-		stickySession = roundrobin.NewStickySession(cookieName)
+		cookieOptions := roundrobin.CookieOptions{MaxAge: stickiness.CookieMaxAge}
+		stickySession = roundrobin.NewStickySessionWithOptions(cookieName, stickiness.CookieCipherKey, cookieOptions)
 	}
 
 	lbMethod, err := types.NewLoadBalancerMethod(backend.LoadBalancer)
