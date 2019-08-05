@@ -26,6 +26,8 @@ const (
 	SuffixBackendLoadBalancerSticky                             = SuffixBackendLoadBalancer + ".sticky"
 	SuffixBackendLoadBalancerStickiness                         = SuffixBackendLoadBalancer + ".stickiness"
 	SuffixBackendLoadBalancerStickinessCookieName               = SuffixBackendLoadBalancer + ".stickiness.cookieName"
+	SuffixBackendLoadBalancerStickinessCookieMaxAge             = SuffixBackendLoadBalancer + ".stickiness.cookie.maxAge"
+	SuffixBackendLoadBalancerStickinessCookieCipherKey          = SuffixBackendLoadBalancer + ".stickiness.cookie.cipherKey"
 	SuffixBackendMaxConnAmount                                  = "backend.maxconn.amount"
 	SuffixBackendMaxConnExtractorFunc                           = "backend.maxconn.extractorfunc"
 	SuffixBackendBuffering                                      = "backend.buffering"
