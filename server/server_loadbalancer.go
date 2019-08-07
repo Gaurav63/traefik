@@ -125,9 +125,14 @@ func (s *Server) buildLoadBalancer(frontendName string, backendName string, back
 
 	var stickySession *roundrobin.StickySession
 	var cookieName string
+	var cookieCipherKey string
+	var cookieMaxAge int
 	if stickiness := backend.LoadBalancer.Stickiness; stickiness != nil {
+		fmt.Printf("stickiness: %v\n", stickiness)
 		cookieName = cookie.GetName(stickiness.CookieName, backendName)
 		cookieOptions := roundrobin.CookieOptions{MaxAge: stickiness.CookieMaxAge}
+		cookieCipherKey = stickiness.CookieCipherKey
+		cookieMaxAge = stickiness.CookieMaxAge
 		stickySession = roundrobin.NewStickySessionWithOptions(cookieName, stickiness.CookieCipherKey, cookieOptions)
 	}
 
@@ -144,6 +149,8 @@ func (s *Server) buildLoadBalancer(frontendName string, backendName string, back
 
 		if stickySession != nil {
 			log.Debugf("Sticky session with cookie %v", cookieName)
+			log.Debugf("Sticky session with cookie cipher key %v", cookieCipherKey)
+			log.Debugf("Sticky session with cookie maxAge %v", cookieMaxAge)
 
 			lb, err = roundrobin.NewRebalancer(rr, roundrobin.RebalancerStickySession(stickySession))
 			if err != nil {
@@ -160,6 +167,8 @@ func (s *Server) buildLoadBalancer(frontendName string, backendName string, back
 
 		if stickySession != nil {
 			log.Debugf("Sticky session with cookie %v", cookieName)
+			log.Debugf("Sticky session with cookie cipher key %v", cookieCipherKey)
+			log.Debugf("Sticky session with cookie maxAge %v", cookieMaxAge)
 
 			if s.accessLoggerMiddleware != nil {
 				lb, err = roundrobin.New(saveFrontend, roundrobin.EnableStickySession(stickySession))

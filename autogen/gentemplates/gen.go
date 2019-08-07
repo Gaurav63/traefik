@@ -1325,6 +1325,8 @@ var _templatesKubernetesTmpl = []byte(`[backends]
       {{if $backend.LoadBalancer.Stickiness }}
       [backends."{{ $backendName }}".loadBalancer.stickiness]
         cookieName = "{{ $backend.LoadBalancer.Stickiness.CookieName }}"
+        cookieCipherKey = "{{ $backend.LoadBalancer.Stickiness.CookieCipherKey }}"
+        cookieMaxAge = {{ $backend.LoadBalancer.Stickiness.CookieMaxAge }}
       {{end}}
 
     {{if $backend.MaxConn }}
