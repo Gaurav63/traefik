@@ -565,14 +565,8 @@
                             </div>
                             <div class="control" *ngIf="p.loadBalancer.stickiness">
                               <div class="tags has-addons">
-                                <span class="tag is-light">Cookie Cipherkey</span>
-                                <span class="tag is-info">{{ p.loadBalancer.stickiness.cookie.cipherKey }}</span>
-                              </div>
-                            </div>
-                            <div class="control" *ngIf="p.loadBalancer.stickiness">
-                              <div class="tags has-addons">
                                 <span class="tag is-light">Cookie MaxAge</span>
-                                <span class="tag is-info">{{ p.loadBalancer.stickiness.cookie.maxAge }}</span>
+                                <span class="tag is-info">{{ p.loadBalancer.stickiness.cookieMaxAge }}</span>
                               </div>
                             </div>
                           </div>
