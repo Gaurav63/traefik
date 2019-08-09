@@ -253,16 +253,20 @@ func TestGetLoadBalancer(t *testing.T) {
 		{
 			desc: "should return a struct when labels are set",
 			labels: map[string]string{
-				TraefikBackendLoadBalancerMethod:               "drr",
-				TraefikBackendLoadBalancerSticky:               "true",
-				TraefikBackendLoadBalancerStickiness:           "true",
-				TraefikBackendLoadBalancerStickinessCookieName: "foo",
+				TraefikBackendLoadBalancerMethod:                    "drr",
+				TraefikBackendLoadBalancerSticky:                    "true",
+				TraefikBackendLoadBalancerStickiness:                "true",
+				TraefikBackendLoadBalancerStickinessCookieName:      "foo",
+				TraefikBackendLoadBalancerStickinessCookieCipherKey: "aaaaaaaaaaaaaaaa",
+				TraefikBackendLoadBalancerStickinessCookieMaxAge:    "200",
 			},
 			expected: &types.LoadBalancer{
 				Method: "drr",
 				Sticky: true,
 				Stickiness: &types.Stickiness{
-					CookieName: "foo",
+					CookieName:      "foo",
+					CookieMaxAge:    200,
+					CookieCipherKey: "aaaaaaaaaaaaaaaa",
 				},
 			},
 		},

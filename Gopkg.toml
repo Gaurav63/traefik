@@ -269,6 +269,6 @@
   branch = "feature/EncryptSessionCookie"
   name = "github.com/Gaurav63/oxy"
 
-[[constraint]]
+[[override]]
   branch = "master"
   name = "github.com/Gaurav63/security"

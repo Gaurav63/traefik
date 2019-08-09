@@ -1057,11 +1057,7 @@ func getStickiness(service *corev1.Service) *types.Stickiness {
 		if cookieCipherKey := getStringValue(service.Annotations, annotationKubernetesSessionCookieCipherKey, ""); len(cookieCipherKey) > 0 {
 			stickiness.CookieCipherKey = cookieCipherKey
 		}
-
-		cookieMaxAge := getIntValue(service.Annotations, annotationKubernetesSessionCookieMaxAge, 0)
-		stickiness.CookieMaxAge = cookieMaxAge
-		fmt.Printf("cookieMaxAge:%d\n", stickiness.CookieMaxAge)
-		fmt.Printf("cookieCipherKey:%s\n", stickiness.CookieCipherKey)
+		stickiness.CookieMaxAge = getIntValue(service.Annotations, annotationKubernetesSessionCookieMaxAge, 0)
 		return stickiness
 	}
 	return nil

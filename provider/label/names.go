@@ -140,6 +140,8 @@ const (
 	TraefikBackendLoadBalancerSticky                            = Prefix + SuffixBackendLoadBalancerSticky
 	TraefikBackendLoadBalancerStickiness                        = Prefix + SuffixBackendLoadBalancerStickiness
 	TraefikBackendLoadBalancerStickinessCookieName              = Prefix + SuffixBackendLoadBalancerStickinessCookieName
+	TraefikBackendLoadBalancerStickinessCookieCipherKey         = Prefix + SuffixBackendLoadBalancerStickinessCookieCipherKey
+	TraefikBackendLoadBalancerStickinessCookieMaxAge            = Prefix + SuffixBackendLoadBalancerStickinessCookieMaxAge
 	TraefikBackendMaxConnAmount                                 = Prefix + SuffixBackendMaxConnAmount
 	TraefikBackendMaxConnExtractorFunc                          = Prefix + SuffixBackendMaxConnExtractorFunc
 	TraefikBackendBuffering                                     = Prefix + SuffixBackendBuffering

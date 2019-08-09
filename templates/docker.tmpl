@@ -23,6 +23,8 @@
       {{if $loadBalancer.Stickiness }}
       [backends."backend-{{ $backendName }}".loadBalancer.stickiness]
         cookieName = "{{ $loadBalancer.Stickiness.CookieName }}"
+        cookieCipherKey = "{{ $loadBalancer.Stickiness.CookieCipherKey }}"
+        cookieMaxAge = {{ $loadBalancer.Stickiness.CookieMaxAge }}
       {{end}}
   {{end}}
 

@@ -17,16 +17,18 @@ const (
 
 // Default values
 const (
-	DefaultWeight                                  = 1
-	DefaultProtocol                                = "http"
-	DefaultPassHostHeader                          = true
-	DefaultPassTLSCert                             = false
-	DefaultFrontendPriority                        = 0
-	DefaultCircuitBreakerExpression                = "NetworkErrorRatio() > 1"
-	DefaultBackendLoadBalancerMethod               = "wrr"
-	DefaultBackendMaxconnExtractorFunc             = "request.host"
-	DefaultBackendLoadbalancerStickinessCookieName = ""
-	DefaultBackendHealthCheckPort                  = 0
+	DefaultWeight                                       = 1
+	DefaultProtocol                                     = "http"
+	DefaultPassHostHeader                               = true
+	DefaultPassTLSCert                                  = false
+	DefaultFrontendPriority                             = 0
+	DefaultCircuitBreakerExpression                     = "NetworkErrorRatio() > 1"
+	DefaultBackendLoadBalancerMethod                    = "wrr"
+	DefaultBackendMaxconnExtractorFunc                  = "request.host"
+	DefaultBackendLoadbalancerStickinessCookieName      = ""
+	DefaultBackendLoadbalancerStickinessCookieCipherKey = ""
+	DefaultBackendLoadbalancerStickinessCookieMaxAge    = 0
+	DefaultBackendHealthCheckPort                       = 0
 )
 
 var (

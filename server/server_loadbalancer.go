@@ -128,7 +128,6 @@ func (s *Server) buildLoadBalancer(frontendName string, backendName string, back
 	var cookieCipherKey string
 	var cookieMaxAge int
 	if stickiness := backend.LoadBalancer.Stickiness; stickiness != nil {
-		fmt.Printf("stickiness: %v\n", stickiness)
 		cookieName = cookie.GetName(stickiness.CookieName, backendName)
 		cookieOptions := roundrobin.CookieOptions{MaxAge: stickiness.CookieMaxAge}
 		cookieCipherKey = stickiness.CookieCipherKey

@@ -437,6 +437,8 @@ var _templatesDockerV1Tmpl = []byte(`{{$backendServers := .Servers}}
     {{if hasStickinessLabel $backend }}
     [backends."backend-{{ $backendName }}".loadbalancer.stickiness]
       cookieName = "{{ getStickinessCookieName $backend }}"
+      cookieCipherKey = "{{ getStickinessCookieCipherKey $backend }}"
+      cookieMaxAge = {{ getStickinessCookieMaxAge $backend }}
     {{end}}
   {{end}}
 
@@ -654,6 +656,8 @@ var _templatesDockerTmpl = []byte(`{{$backendServers := .Servers}}
       {{if $loadBalancer.Stickiness }}
       [backends."backend-{{ $backendName }}".loadBalancer.stickiness]
         cookieName = "{{ $loadBalancer.Stickiness.CookieName }}"
+        cookieCipherKey = "{{ $loadBalancer.Stickiness.CookieCipherKey }}"
+        cookieMaxAge = {{ $loadBalancer.Stickiness.CookieMaxAge }}
       {{end}}
   {{end}}
 
