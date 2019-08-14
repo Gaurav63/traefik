@@ -75,7 +75,7 @@
   branch = "feature/EncryptSessionCookie"
   name = "github.com/Gaurav63/oxy"
   packages = ["roundrobin"]
-  revision = "554007f463bcbc140b9ae6d401fc26c2631ab6c5"
+  revision = "77e8518d6cf1041eeab574600278d9933946ebc0"
 
 [[projects]]
   branch = "master"
@@ -865,7 +865,6 @@
   revision = "9b66602d496a139e4722bdde32f0f1ac1c12d4a8"
 
 [[projects]]
-  branch = "master"
   name = "github.com/jjcollinge/servicefabric"
   packages = ["."]
   revision = "8eebe170fa1ba25d3dfb928b3f86a7313b13b9fe"
@@ -1313,8 +1312,8 @@
     "domain",
     "util"
   ]
-  revision = "efb64632cab7701ec33f1eaeaa738e2207efe68e"
-  version = "v5.14"
+  revision = "6d8d9179b66fdba106f6f07d0279619145e70f7a"
+  version = "v5.15.0"
 
 [[projects]]
   name = "github.com/tv42/zbase32"
